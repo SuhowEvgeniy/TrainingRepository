@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "78e8f3f8-c28c-4f8a-bb13-edbcdcc5f1b0",
+		"name": "qwe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27426775",
+		"_collection_link": "https://red-rocket-81274.postman.co/workspace/Team-Workspace~363b681f-cbed-4f4d-846e-2b2eca7ed8d7/collection/27426775-78e8f3f8-c28c-4f8a-bb13-edbcdcc5f1b0?source=collection_link"
+	},
+	"item": [
+		{
+			"name": "https://react.intelogis.ru/NewTms/auth/signin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Время отклика меньше 300ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "l",
+							"value": "shelk@ils.ru",
+							"type": "text"
+						},
+						{
+							"key": "p",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://react.intelogis.ru/NewTms/auth/signin",
+					"protocol": "https",
+					"host": [
+						"react",
+						"intelogis",
+						"ru"
+					],
+					"path": [
+						"NewTms",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
